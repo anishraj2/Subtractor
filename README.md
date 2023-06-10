@@ -43,15 +43,35 @@ A full subtractor is a combinational circuit that performs subtraction involving
 
 
 ## Program:
-
-
+### HALF SUBTRACTOR:
+module exp4a(a,b,diff,borrow);<br>
+input a,b;<br>
+output diff,borrow;<br>
+wire adash;<br>
+xor(diff,a,b);<br>
+not(adash,a);<br>
+and(borrow,adash,b);<br>
+endmodule<br>
+### FULL SUBTRACTOR:
+module exp4b(a,b,c,diff,borrow);<br>
+input a,b,c;<br>
+output diff,borrow;<br>
+wire adash,x,p,q,r;<br>
+xor(x,b,c);<br>
+xor(diff,a,x);<br>
+not(adash,a);<br>
+and(p,adash,c);<br>
+and(q,b,c);<br>
+and(r,adash,b);<br>
+or(borrow,p,q,r);<br>
+endmodule
 ## RTL Schematic:
-
-
-
-
+HALF SUBTRACTOR:<BR>
+![HALF SUBTRACTOR](1.png)<BR>
+FULL SUBTRACTOR:
+![FULL SUBTRACTOR](2.png)
 ## Timing Diagram:
-
-
+![Timing Diagram](3.png)<br>
+![Timing Diagram](4.png)
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables are verified using Verilog HDL.
