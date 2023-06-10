@@ -68,7 +68,8 @@ endmodule
 ## RTL Schematic:
 HALF SUBTRACTOR:<BR>
 ![HALF SUBTRACTOR](1.png)<BR>
-FULL SUBTRACTOR:
+
+FULL SUBTRACTOR:<br>
 ![FULL SUBTRACTOR](2.png)
 ## Timing Diagram:
 ![Timing Diagram](3.png)<br>
